@@ -11,15 +11,16 @@ function Grocery (){
     function addItems(e){
     
     e.preventDefault();
-    alert(`you added new item`)
     if(input.trim() !== ''){
         setItems([...items,input]);
         setInput("");
     }
+    alert(`you added new item`)
     }
     function deleteItem(indextodelete,item){
-        alert(`Your item - ${item} is deleted`)
+        
         setItems(items.filter((_,index) => index !==indextodelete))
+        alert(`Your item - ${item} is deleted`)
     };
     return (
 
